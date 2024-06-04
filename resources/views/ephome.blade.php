@@ -6,7 +6,7 @@
             <div class="mb-16">
                 <hr>
                 <h2 class="my-2 sm:my-4 md:my-6 text-base md:text-lg xl:text-2xl text-gray-800 font-bold " animate-shake animate-infinite animate-ease-in>
-                    Featured Products</h2>
+                    Data center SPD and Waveform Correction Devices</h2>
                 <div class="w-full">
                     <div class="grid grid-cols-4 gap-2">
 
@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <a class="mt-10 block text-center text-lg text-blue-500 font-semibold"
-                    href="{{ route('products.index') }}">View All
+                    href="{{ route('products.index') }}?category=ep-solutions">View All
                     Products</a>
             </div>
             <hr>
@@ -31,17 +31,11 @@
         @section('other-contents')
         <div class="w-full">
             <div class="bg-gray-200 w-full px-[300px]">
-                @include('layouts.sections.high-reliability')
+                @include('layouts.sections.data-protection-01')
             </div>
             <div class="bg-white w-full px-[300px]">
-                @include('layouts.sections.unique-patented')
+                @include('layouts.sections.data-protection-02')
             </div>
-            <div class="bg-gray-200 w-full px-[300px]">
-                @include('layouts.sections.excellent-performance')
-              </div>
-                <div class="bg-white w-full px-[300px]">
-                    @include('layouts.sections.green-building')
-                </div>
             </div>
                 @endsection
 
