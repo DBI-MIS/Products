@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Brand;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -98,9 +99,11 @@ class ProductFactory extends Factory
             'capacity' => fake()->sentence(2),
             'equipment_application' => fake()->word(1),
             'equipment_header' => $equipment_header,
-            'brand_id' => Brand::factory()->create(),
+            // 'brand_id' => Brand::factory()->count(1),
             'status' => 0,
             'featured' => 0,
         ];
     }
+
+
 }

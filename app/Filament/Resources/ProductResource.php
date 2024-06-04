@@ -73,6 +73,7 @@ class ProductResource extends Resource
                     ->relationship('product_brand', 'name')
                     ->searchable()
                     ->preload()
+                    ->nullable()
                     ->label(__('Brand')),
                    
                 
@@ -142,7 +143,8 @@ class ProductResource extends Resource
                     ->required(),]),
 
                     FileUpload::make('product_img')
-                    ->image()->directory('products/photos'),
+                    ->image()->directory('products/photos')
+                    ->nullable(),
 
                    
                 
@@ -179,6 +181,7 @@ class ProductResource extends Resource
                     'Refrigeration' => 'Refrigeration',
                     'Ventilation' => 'Ventilation',
                     'ProMED AtmosAir' => 'ProMED AtmosAir',
+                    'EP Solutions' => 'EP Solutions',
                     'Other Products' => 'Other Products',
                     
                 ])->required(),

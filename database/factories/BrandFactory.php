@@ -16,7 +16,7 @@ class BrandFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->randomElement([
+        $name = fake()->unique()->randomElement([
             'Dunham-Bush',
             'Truwater',
             'Elta Fan',

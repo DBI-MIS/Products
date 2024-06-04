@@ -25,7 +25,7 @@ protected function getHeaderWidgets(): array
     return [
         // Widgets\AccountWidget::class,
         DashboardOverview::class,
-        LatestResponseOverview::class,
+        // LatestResponseOverview::class,
         
     ];
 }

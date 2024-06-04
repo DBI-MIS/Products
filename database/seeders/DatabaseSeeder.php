@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Product;
 use App\Models\User;
+use Database\Factories\BrandFactory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -30,10 +31,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::factory()->count(8)->create();
+        Brand::factory()->count(7)->create();
 
         Product::factory()->count(40)
         ->has(Category::factory()->count(3), 'product_categories')
+        // ->has(Brand::factory()->count(1), 'product_brand')
         ->create();
+        // ->each(fn($product) => $product->product_brand->update(
+        //     'product_id', $product->id
+        // ));
 
         
 

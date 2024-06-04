@@ -1,6 +1,7 @@
 <?php
 
 use App\Filament\Resources\ResponseResource\Pages\CreateResponse;
+use App\Http\Controllers\EPHomeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProductController;
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Mail;
 use MailerSend\Endpoints\Email;
 
 Route::get('/', HomeController::class)->name('home');
+
+Route::get('/epsolutions', EPHomeController::class)->name('ephome');
 
 
 Route::get('/product', [ProductController::class, 'index'])->name('products.index');

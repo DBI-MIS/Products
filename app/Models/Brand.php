@@ -15,9 +15,15 @@ class Brand extends Model
         'brand_logo',
     ];
 
-    public function product()
-    {
-        return $this->belongsTo(Product::class);
-    }
+    // public function product()
+    // {
+    //     return $this->hasOne(Product::class);
+    // }
+
+    // public function brand_product()
+    // {
+    //     return $this->hasMany(Product::class);
+    // }
+
 
 }

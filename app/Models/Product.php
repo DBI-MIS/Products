@@ -44,10 +44,16 @@ class Product extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    // public function product_brand()
+    // {
+    //     return $this->hasOne(Brand::class);
+    // }
+
     public function product_brand()
     {
-        return $this->hasOne(Brand::class, 'id', 'brand_id');
+        return $this->belongsTo(Brand::class, 'brand_id');
     }
+
 
     public function product_categories()
     {

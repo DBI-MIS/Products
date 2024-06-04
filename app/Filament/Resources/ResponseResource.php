@@ -39,7 +39,9 @@ class ResponseResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-arrow-down';
 
-    protected static ?string $navigationGroup = 'Job Applications';
+    protected static ?string $navigationGroup = 'Form Inquiries';
+
+    protected static ?string $navigationLabel = 'Product Inquiry';
     
     
     
