@@ -5,43 +5,53 @@
                 <p class="text-lg mt-4 text-balance">As a company that does business with the environment in mind, it makes sense that we offer a complete range of green heating and cooling systems to ensure a cleaner and greener future. Our range of energy efficient, clean energy products include green HVAC/R heating and cooling systems, large chillers, heat pumps, thermal energy storage, airside systems; and unitary to residences, commercial buildings & industrial facilities.</p>
             </div>
             <div class="items-center text-center flex-1">
-                <div class="grid grid-cols-3 gap-2 ">
+                <div class="grid grid-cols-4 gap-2 ">
                     
-                        <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+                        <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
                             <a href="/product?category=Airconditioning"><img class="w-40 mx-auto" src="{{asset('/Product Image - AIRCONDITIONING.png')}}" alt=""></a>
                             <span class="">Airconditioning</span>
                         </div>
                         
 
-                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
                             <a href="/product?category=Refrigeration"><img class="w-40 mx-auto" src="{{asset('/Product Image - REFRIGERATION.png')}}" alt=""></a>
                             <p class="">Refrigeration</p>
                         </div>
                        
                     
                     
-                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
                             <a href="/product?category=Ventilation"><img class="w-40 mx-auto" src="{{asset('/Product Image - VENTILATION.png')}}" alt=""></a>
                             <p class="">Ventilation</p>
                         </div>
                         
 
-                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
                             <a href="/product?category=CoolingTower"><img class="w-40 mx-auto" src="{{asset('/Product Image - COOLING TOWER TRUE.png')}}" alt=""></a>
                             <p class="">Cooling Towers</p>
                         </div>
                         
                     
                     
-                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
                             <a href="/product?category=ProMEDAtmosAir"><img class="w-40 mx-auto" src="{{asset('/Product Image - PROMEDUSA ATMOSAIR.png')}}" alt=""></a>
-                            <p class="">PROMEDUSA + AtmosAir™</p>
+                            <p class="text-xs"">PROMEDUSA + AtmosAir™</p>
+                        </div>
+
+                        <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
+                            <a href="/epsolutions"><img class="w-40 mx-auto" src="{{asset('/Product Image - PROMEDUSA ATMOSAIR.png')}}" alt=""></a>
+                            <p class="">EP Solutions</p>
+                        </div>
+
+                        <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
+                            <a href="/product"><img class="w-40 mx-auto" src="{{asset('/Product Image - PROMEDUSA ATMOSAIR.png')}}" alt=""></a>
+                            <p class="text-xs">Other Products</p>
                         </div>
                         
 
-                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+                      <div class="rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800 h-[150px]">
                             <a href="https://www.tacphils.com/" target="_blank"><img class="w-40 mx-auto" src="{{asset('/VCOLogo.png')}}" alt=""></a>
-                            <p class="">Coconut Oil Products</p>
+                            <p class="text-xs"">Coconut Oil Products</p>
                         </div>
                         
                        
