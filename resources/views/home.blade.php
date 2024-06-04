@@ -22,34 +22,7 @@
                 </div>
             
                 
-                <!-- Banner Container -->
-                <div class="w-full xl:w-1/6 xl:py-[clamp(52px,_-0.6195px_+_16.4436vi,_224px)]">
-
-                <!-- Banner Details -->
-                    <div class="flex flex-row justify-between text-gray-800 xl:text-white xl:flex-col xl:items-end">
-                        
-                        <div class="leading-3 w-full xl:mb-5">
-                            <hr class="hidden xl:block">
-                            <span class="text-xs lg:text-sm xl:text-base">Serving</span><br>
-                            <span class="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold">140+</span><br>
-                            <span class="text-xs lg:text-sm xl:text-base">Clients/Projects</span>
-                        </div>
-                        <div class="leading-3 w-full xl:mb-5">
-                            <hr class="hidden xl:block">
-                            <span class="text-xs lg:text-sm xl:text-base">Proudly</span><br>
-                            <span class="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold inline-block">35<span class="text-xl">Years</span></span><br>
-                            <span class="text-xs lg:text-sm xl:text-base">in Service</span>
-                        </div>
-                        <div class="leading-3 w-full xl:mb-5">
-                            <hr class="hidden xl:block">
-                            <span class="text-xs lg:text-sm xl:text-base">Among the</span><br>
-                            <span class="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold inline-block"><span class="text-xl align-top">Top</span>100</span><br>
-                            <span class="text-xs lg:text-sm xl:text-base italic text-pretty">*Employer for Fresh Graduates</span>
-                        </div>  
-                    </div>                       
-                    
             
-                </div>
             </div>
 
         </div>

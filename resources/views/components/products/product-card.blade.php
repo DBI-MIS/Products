@@ -15,7 +15,7 @@
 		<h1 class="font-bold text-base">
         <a wire:navigate href="{{ route('products.show', $product->slug) }}">{{ $product->title}}</a>
         </h1>
-        <span>{{ $product->product_brand->name }}</span>
+        <span>{{ $product->product_brand?->name }}</span>
 
         <div class="topics flex flex-wrap justify-start gap-1 my-auto">
             @if ($category = $product->product_categories()->first())

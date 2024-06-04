@@ -958,6 +958,7 @@ class ComposerStaticInitd14b7563ac210559f1c22ba9e7a06d40
         'App\\Filament\\Widgets\\DashboardOverview' => __DIR__ . '/../..' . '/app/Filament/Widgets/DashboardOverview.php',
         'App\\Filament\\Widgets\\LatestResponseOverview' => __DIR__ . '/../..' . '/app/Filament/Widgets/LatestResponseOverview.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\EPHomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/EPHomeController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MailController' => __DIR__ . '/../..' . '/app/Http/Controllers/MailController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',

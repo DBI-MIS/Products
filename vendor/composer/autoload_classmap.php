@@ -54,6 +54,7 @@ return array(
     'App\\Filament\\Widgets\\DashboardOverview' => $baseDir . '/app/Filament/Widgets/DashboardOverview.php',
     'App\\Filament\\Widgets\\LatestResponseOverview' => $baseDir . '/app/Filament/Widgets/LatestResponseOverview.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\EPHomeController' => $baseDir . '/app/Http/Controllers/EPHomeController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\MailController' => $baseDir . '/app/Http/Controllers/MailController.php',
     'App\\Http\\Controllers\\ProductController' => $baseDir . '/app/Http/Controllers/ProductController.php',
