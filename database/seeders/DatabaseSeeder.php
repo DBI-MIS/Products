@@ -23,9 +23,10 @@ class DatabaseSeeder extends Seeder
 
         User::factory()
             ->create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'email' => 'admin@dbiphils.com',
             'password' => Hash::make('password'),
+            'role' => 'ADMIN',
         ]);
 
         Category::factory()->count(8)->create();
