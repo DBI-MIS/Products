@@ -1,10 +1,15 @@
 <x-app-layout title="Home Page">
     @section('hero')
     <!-- Hero -->
+
             
-        <div class="w-full bg-blue-600">
+        <div class="w-full bg-blue-600/50 relative">
+            
+            <div class="bg-fixed bg-no-repeat bg-cover h-1/2" 
+    style="background-image: url({{ asset('/Background05.png') }})">
             
             <div class="mx-[clamp(12px,_-8.8031px_+_6.501vi,_80px)] xl:flex xl:justify-between xl:items-center">
+                
                 <div class="py-[clamp(52px,_-0.6195px_+_16.4436vi,_224px)]">
                 <!-- Hero Title -->
                 <h1 class="font-bold text-[clamp(26px,_4.5851px_+_6.6922vi,_96px)] leading-[clamp(12px,_-8.8031px_+_6.501vi,_80px)] text-balance text-white">
@@ -24,7 +29,7 @@
                 
             
             </div>
-
+            </div>
         </div>
     
         

@@ -2,23 +2,26 @@
 
     @section('hero')
     <!-- Hero -->
-            
-        <div class="w-full bg-sky-900">
-            
-            <div class="p-24">
-                <div class="flex flex-col text-white">
+    <div class="w-full bg-blue-600/50 relative">
+    <div class="bg-fixed bg-no-repeat bg-cover h-1/2" 
+    style="background-image: url({{ asset('/BG-EPSOLUTION.jpg') }})">
+    <div class="mx-[clamp(12px,_-8.8031px_+_6.501vi,_80px)] xl:flex xl:justify-between xl:items-center">
+                
+        <div class="py-[clamp(52px,_-0.6195px_+_16.4436vi,_224px)] text-white">
                             <div class="">
-                                <p class="text-4xl font-extrabold">Data Center Applications</p>
-                                    <span class="text-2xl font-medium">Surge Protection and Waveform correction</span>
+                                <p class="font-bold text-[clamp(26px,_4.5851px_+_6.6922vi,_96px)] leading-[clamp(12px,_-8.8031px_+_6.501vi,_80px)] text-balance">Data Center Applications</p>
+                                    <p class="my-[clamp(8px,_-0.566px_+_2.6769vi,_36px)] text-[clamp(12px,_4.0459px_+_2.4857vi,_38px)] leading-[clamp(12px,_4.0459px_+_2.4857vi,_38px)] font-thin text-white mb-2">{{ __('Surge Protection and Waveform correction') }}</p>
                             </div>
                             <div>
-                                <p class="text-lg mt-4 text-balance">Depending on the geographical location, datacenters spend an average of 40% of their annual overall operating costs towards their power bill and 40% on their maintenance and other expenditure (*US chamber of Commerce Technology Engagement Center). The power bill and the maintenance costs are huge factors that affect the profit-maximizing conditions of the data center. The data center needs to reduce its maintenance costs and reduce its power bills to gain more profits. </p>
+                                <p class="text-sm md:text-xl mt-4  text-balance">Depending on the geographical location, datacenters spend an average of 40% of their annual overall operating costs towards their power bill and 40% on their maintenance and other expenditure (*US chamber of Commerce Technology Engagement Center). The power bill and the maintenance costs are huge factors that affect the profit-maximizing conditions of the data center. The data center needs to reduce its maintenance costs and reduce its power bills to gain more profits. </p>
                             </div>
                            
                         </div>
                     </div>
+                </div>
+            </div>
 
-        </div>
+       
     
         
     @endsection
