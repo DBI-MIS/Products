@@ -55,10 +55,10 @@
 
         @section('other-contents')
         <div class="w-full">
-            <div class="bg-gray-200 w-full p-24">
+            <div class="bg-gray-200 w-full px-4 py-4 md:px-12 md:py-12 lg:px-24 lg:py-24">
                 @include('layouts.sections.data-protection-01')
             </div>
-            <div class="bg-white w-full p-24">
+            <div class="bg-white w-full px-4 py-4 md:px-12 md:py-12 lg:px-24 lg:py-24">
                 @include('layouts.sections.data-protection-02')
             </div>
             </div>

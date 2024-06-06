@@ -1,6 +1,6 @@
 <div class="w-full">
-    <div class="flex flex-row justify-between items-center mb-10">
-        <div class="flex flex-col w-full">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+        <div class="flex flex-col w-full ">
            
                 <p class="text-4xl font-bold mt-4">Data Centers Need Protection</p>
           
@@ -11,13 +11,13 @@
                     noise, and other electrical noises.</p>
             
         </div>
-        <div class="overflow-hidden h-[200px]">
+        <div class="h-[400px] overflow-hidden  w-full md:w-1/2">
             <img class="" src="{{ asset('/Server-Room-1024x768.jpg') }}" alt="">
         </div>
 
 
     </div>
-    <div class="flex flex-row gap-4">
+    <div class="flex flex-row gap-4 justify-around">
         <div class="flex flex-col">
             <img src="{{ asset('/DataCenterBEFORE.png') }}" alt="">
             <span class="pt-3">Before installing EP filters</span>

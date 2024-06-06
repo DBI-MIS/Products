@@ -40,8 +40,8 @@
         <div class="mb-10 w-full">
             <div class="my-10">
                 <hr>
-                <h2 class="my-2 sm:my-4 md:my-6 text-xl xl:text-2xl text-gray-800 font-bold " animate-shake animate-infinite animate-ease-in>
-                    Featured Products</h2>
+                <h1 class="my-2 sm:my-4 md:my-6 text-xl xl:text-2xl text-gray-800 font-bold " animate-shake animate-infinite animate-ease-in>
+                    Featured Products</h1>
                 <div class="w-full">
                     <div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-2">
 
@@ -65,16 +65,16 @@
 
         @section('other-contents')
         <div class="w-full">
-            <div class="bg-gray-200 w-full md:px-24 md:py-24 px-4 py-4">
+            <div class="bg-gray-200 w-full px-4 py-4 md:px-12 md:py-12 lg:px-24 lg:py-24">
                 @include('layouts.sections.high-reliability')
             </div>
-            <div class="bg-white w-full md:px-24 md:py-24 px-4 py-4">
+            <div class="bg-white w-full px-4 py-4 md:px-12 md:py-12 lg:px-24 lg:py-24">
                 @include('layouts.sections.unique-patented')
             </div>
-            <div class="bg-gray-200 w-full md:px-24 md:py-24 px-4 py-4">
+            <div class="bg-gray-200 w-full px-4 py-4 md:px-12 md:py-12 lg:px-24 lg:py-24">
                 @include('layouts.sections.excellent-performance')
               </div>
-                <div class="bg-white w-full md:px-24 md:py-24 px-4 py-4">
+            <div class="bg-white w-full px-4 py-4 md:px-12 md:py-12 lg:px-24 lg:py-24">
                     @include('layouts.sections.green-building')
                 </div>
             </div>
