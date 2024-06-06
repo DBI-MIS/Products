@@ -1,5 +1,5 @@
 @props(['product'])
-<div class="w-full py-5 px-5 mb-5 rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
+<div class="w-full py-2 px-2 mb-5 rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
     <div class="grid grid-cols-3 gap-x-5 text-balance">
         
         <div class="col-span-1">
@@ -12,10 +12,10 @@
         </div>
         <div class="col-span-2 w-full flex flex-col">
             
-		<h1 class="font-bold text-base">
+		<span class="font-bold text-lg">
         <a wire:navigate href="{{ route('products.show', $product->slug) }}">{{ $product->title}}</a>
-        </h1>
-        <span>{{ $product->product_brand?->name }}</span>
+        </span>
+        <span class="font-light text-sm">{{ $product->product_brand?->name }}</span>
 
         <div class="topics flex flex-wrap justify-start gap-1 my-auto">
             @if ($category = $product->product_categories()->first())

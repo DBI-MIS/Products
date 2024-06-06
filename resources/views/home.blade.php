@@ -21,7 +21,7 @@
                 <p class="my-[clamp(8px,_-0.566px_+_2.6769vi,_36px)] text-[clamp(12px,_4.0459px_+_2.4857vi,_38px)] leading-[clamp(12px,_4.0459px_+_2.4857vi,_38px)] font-thin text-white mb-2">{{ __('Building Sustainable Future Through Green Technology') }}</p>
                 </h1>
                 <!-- Call to Action Button -->
-                <a class="my-[clamp(2px,_-1.0593px_+_0.956vi,_12px)] inline-block px-[clamp(12px,_5.8815px_+_1.912vi,_32px)] py-[clamp(2px,_-1.0593px_+_0.956vi,_12px)] text-[clamp(14px,_10.9407px_+_0.956vi,_24px)] text-white bg-blue-600 rounded-lg animate-pulse animate-infinite animate-duration-[3000ms] animate-delay-[2000ms] animate-ease-in shadow-sm shadow-gray-950" 
+                <a class="my-[clamp(2px,_-1.0593px_+_0.956vi,_12px)] inline-block px-[clamp(12px,_5.8815px_+_1.912vi,_32px)] py-[clamp(2px,_-1.0593px_+_0.956vi,_12px)] text-[clamp(14px,_10.9407px_+_0.956vi,_24px)] text-white bg-yellow-500 rounded-lg  shadow-sm shadow-gray-950" 
                 href="{{ route('products.index') }}">
                 {{ __('Browse Products') }}</a>
                 </div>
@@ -37,16 +37,16 @@
     
     @include('layouts.sections.our-products')
 
-        <div class="mb-10 mt-2 sm:mt-4 md:mt-8 xl:mt-0 w-full">
-            <div class="mb-16">
+        <div class="mb-10 w-full">
+            <div class="my-10">
                 <hr>
-                <h2 class="my-2 sm:my-4 md:my-6 text-base md:text-lg xl:text-2xl text-gray-800 font-bold " animate-shake animate-infinite animate-ease-in>
+                <h2 class="my-2 sm:my-4 md:my-6 text-xl xl:text-2xl text-gray-800 font-bold " animate-shake animate-infinite animate-ease-in>
                     Featured Products</h2>
                 <div class="w-full">
-                    <div class="grid grid-cols-4 gap-2">
+                    <div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-2">
 
                         @foreach($featuredProducts as $product)
-                        <div class="md:col-span-1 col-span-3">
+                        <div class="md:col-span-1">
                             <x-products.product-card :product="$product" />
                         </div>
 
@@ -65,16 +65,16 @@
 
         @section('other-contents')
         <div class="w-full">
-            <div class="bg-gray-200 w-full px-[300px]">
+            <div class="bg-gray-200 w-full md:px-24 md:py-24 px-4 py-4">
                 @include('layouts.sections.high-reliability')
             </div>
-            <div class="bg-white w-full px-[300px]">
+            <div class="bg-white w-full md:px-24 md:py-24 px-4 py-4">
                 @include('layouts.sections.unique-patented')
             </div>
-            <div class="bg-gray-200 w-full px-[300px]">
+            <div class="bg-gray-200 w-full md:px-24 md:py-24 px-4 py-4">
                 @include('layouts.sections.excellent-performance')
               </div>
-                <div class="bg-white w-full px-[300px]">
+                <div class="bg-white w-full md:px-24 md:py-24 px-4 py-4">
                     @include('layouts.sections.green-building')
                 </div>
             </div>
