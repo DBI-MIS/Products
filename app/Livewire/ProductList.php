@@ -18,7 +18,7 @@ class ProductList extends Component
     public $sort = 'desc';
 
     #[Url()]
-    public $search = '';
+    public ?string $search = '';
 
     #[Url()]
     public $category = '';
@@ -27,13 +27,15 @@ class ProductList extends Component
     public function setSort($sort)
     {
         $this->sort = ($sort === 'desc') ? 'desc' : 'asc';
-        $this->resetPage();
+        
     }
 
     #[On('search')]
     public function updateSearch($search)
     {
         $this->search = $search;
+        $this->category = '';
+        $this->resetPage();
     }
 
     public function clearFilters()

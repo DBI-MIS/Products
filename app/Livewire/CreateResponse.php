@@ -42,6 +42,7 @@ use Filament\Forms\Components\Actions;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Textarea;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Support\Facades\Blade;
@@ -57,22 +58,8 @@ class CreateResponse extends Component implements HasForms
     use InteractsWithForms;
     use Notifiable;
     
-
-    // protected $fillable = [
-    //     'post_id',
-    //     'full_name',
-    //     'date_response',
-    //     'contact',
-    //     'email_address',
-    //     'current_address',
-    //     'attachment',
-    //     'review',
-    //     'status',
-    // ];
-
-    // public ?array $data = [];
     #[Locked]
-    public  $post_title;
+    public  $product_title;
     public  $date_response;
     #[Validate('required', message:'Please fill out with your full name.')]
     #[Validate('min:5', message:'Your name is too short.')]
@@ -83,33 +70,19 @@ class CreateResponse extends Component implements HasForms
     #[Validate('required', message:'Please fill out with your email address.')]
     #[Validate('email', message:'Your email is invalid.')]
     public ?string $email_address;
-    #[Validate('required', message:'Please fill out with your current address.')]
-    #[Validate('min:20', message:'Your current address format is invalid.')]
-    public ?string $current_address;
-    #[Validate('required', message:'Please attached your resume.')]
-    #[Validate('file|mimes:pdf,doc,docx', message:'Your file must be in PDF or MS Word Format.')]
-    #[Validate('max:5120', message:'Your file must have maximum size of 5MB.')]
-    public $attachment;
-    
-    // public $Disabled = false;
+    #[Validate('required', message:'Please fill out with your message.')]
+    #[Validate('min:20', message:'Your message cannot be less than 20 characters.')]
+    public ?string $message;
 
     protected $casts = [
         'date_response' => 'datetime',
-        // 'attachment' => 'array',
     ];
 
 
     public function mount(Response $response): void
     {
-        // $this->form->fill();
         $this->form->fill($response->toArray());
-        // $this->date_response = Carbon::now()->format('M-d-Y');
-        // $this->full_name = $response->full_name;
-        // $this->contact = $response->contact;
-        // $this->email_address = $response->email_address;
-        // $this->current_address = $response->current_address;
-        // $this->attachment = [];
-        
+    
     }
     
     
@@ -117,8 +90,8 @@ class CreateResponse extends Component implements HasForms
     {
         return $form
             ->schema([
-                Select::make('post_title')
-                ->relationship('post', 'title')
+                Select::make('product_title')
+                ->relationship('product', 'title')
                 // ->readOnly()
                 ->label(__('Position'))
                 // ->required()
@@ -153,43 +126,18 @@ class CreateResponse extends Component implements HasForms
                 ->required()
                 ->columnSpan(1),
 
-                TextInput::make('current_address')
-                ->label(__('Current Addresss'))
-                ->minValue(20)
+                Textarea::make('message')
+                ->label(__('Inquiry'))
+                ->minLength(20)
                 ->required()
                 ->live()
 
                 ->columnSpan(3),
                 
-                FileUpload::make('attachment')
-                ->uploadingMessage('Uploading attachment...')
-                ->directory('form-attachments')
-                ->visibility('public')
-                ->acceptedFileTypes([
-                    'application/pdf',
-                    'application/msword',
-                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
-                ->maxSize(5120)
-                ->getUploadedFileNameForStorageUsing(
-                    fn (TemporaryUploadedFile $file): string => (string) str($file->getClientOriginalName())
-                        ->prepend('job_response-'),)
-                ->openable()
-                // ->downloadable()
-                // ->fetchFileInformation(true)
-                // ->moveFiles()
-                // ->storeFiles(true)
-                ->required()
-                ->live()
-                ->columnSpan(3)
-                ->id('attachment')
-
+              
 
         
-                // ,
-                // Hidden::make('attachment')
-
-        
-                ,
+          
 
                 ])
                 
@@ -205,34 +153,20 @@ class CreateResponse extends Component implements HasForms
     {
         $this->validate();
         $response = Response::create($this->form->getState());
-        // $this->attachment->store(path: 'form-attachments');
-        
-        // dd($this->form->getState());
-    
-        // Save the relationships from the form to the post after it is created.
+      
         $this->form->model($response)->saveRelationships();
 
         $response->notify(new ResponseUpdate($response));
         
-
-        
-        
         $this->dispatch('post-created');
-        // $post_title = 'test message';
-        
-        
-        // $this->form->fill();
-        
-        // $this->redirect('/job');
         
     }
     #[On('post-created')] 
     public function updatePostList()
     {
-        session()->flash('message', 'Job Application submitted successfully.');
+        session()->flash('message', 'Product Inquiry submitted successfully.');
 
         $this->form->fill();
-        $this->attachment=null;
     }
 
     public function render() 

@@ -4,14 +4,13 @@ namespace App\Notifications;
 
 use App\Mail\EmailResponse;
 use App\Models\Post;
+use App\Models\Product;
 use App\Models\Response;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-// use App\Models\Response;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Arr;
 
@@ -23,19 +22,6 @@ class ResponseUpdate extends Notification
     
     public $response;
     
-    
-    // public  $post_title;
-    // public  $date_response;
-    // public ?string $full_name;    
-    // public ?string $contact;
-    // public ?string $email_address;
-    // public ?string $current_address;
-
-    // public $attachment;
-    /**
-     * Create a new notification instance.
-     */
-    // public $post_title == Post::find($post_title);
 
     public function __construct($response)
     {
@@ -48,9 +34,9 @@ class ResponseUpdate extends Notification
      *
      * @return array<int, string>
      */
-    public function via(object $notifiable): array
+    public function via(object $notifiable)
     {
-        return ['mail'];
+        // return ['mail'];
     }
 
     /**
@@ -60,18 +46,17 @@ class ResponseUpdate extends Notification
     {
         
         $response = $this->response;
-        $attachment = $this->response->attachment;
-        $post = Post::find($response->post_title)->title;
+        $post = Product::find($response->product_title)->title;
         
 
         
             
         
-        return (new EmailResponse($response, $attachment, $post))
+        return (new EmailResponse($response, $post))
             ->view('mail.mail')->with('response', $this->response)->with('post', $post)
             ->to('desktoppublisher@dbiphils.com')
-            ->subject('New Job Application')
-            ->from('ggcmis@dbiphils.com', 'New Job Application ')
+            ->subject('New Product Inquiry')
+            ->from('ggcmis@dbiphils.com', 'New Product Inquiry')
             // ->replyTo($this->response->email, $this->response->full_name, 'replyTo')
                 
             
@@ -84,10 +69,8 @@ class ResponseUpdate extends Notification
      *
      * @return array<string, mixed>
      */
-    public function toArray(object $notifiable): array
+    public function toArray()
     {
-        return [
-            Attachment::fromPath('public'.$this->response->attachment),
-        ];
+        
     }
 }

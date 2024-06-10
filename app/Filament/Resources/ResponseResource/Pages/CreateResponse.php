@@ -14,7 +14,7 @@ class CreateResponse extends CreateRecord
 
     protected function getCreatedNotificationTitle(): ?string
     {
-        return 'New Job Application Created';
+        return 'New Product Inquiry';
     }
 
     

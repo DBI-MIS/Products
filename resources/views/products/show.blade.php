@@ -1,9 +1,9 @@
 
 <x-app-layout :title="$product->title">
 
-
-        <article class="col-span-8 md:col-span-3 md:mt-10 mx-auto py-5 w-full h-screen" style="max-width:900px">
-            <div class="flex flex-row items-start gap-x-2 w-full">
+ 
+        <article class="col-span-8 md:col-span-3 md:mt-10 mx-auto py-5 w-full h-full" style="max-width:900px">
+            <div class="flex flex-col md:flex-row items-start gap-x-2 w-full">
             <div class="flex-grow-0 py-5 px-5 mb-5 rounded-md border-opacity-10 p-2 bg-white border-blue-800" 
             style="min-width:280px; max-width:280px"
             >
@@ -13,6 +13,7 @@
                 </tr>
                 @endif
                 <img class="w-full" src="{{ $product->product_img }}" alt="">
+                
             </div>
             <div class="grid grid-cols-3 gap-3 flex-grow">        
                 <div class="col-span-3 w-full py-5 px-5 mb-5 rounded-xl border-l-4 border-opacity-10 p-2 bg-white border-blue-800">
@@ -37,7 +38,7 @@
                         
                       
                         <div class="gap-x-2 mt-4">
-                                <span class="mr-1 rounded-xl px-2 py-1 text-sm bg-sky-200">{{ $product->product_brand->name }}</span>
+                                <span class="mr-1 rounded-xl px-2 py-1 text-sm bg-sky-200">{{ $product->product_brand?->name }}</span>
                                 {{-- <span class="mr-1 rounded-xl px-3 py-1 text-base bg-green-200">{{ $product->equipment_header }}</span> --}}
                         </div>
 
@@ -101,13 +102,27 @@
                             @endif
                         {!! $product->equipment_application !!}
                         </div>
-
+                        
+                        <x-filament::modal width="2xl">
+                            <x-slot name="trigger">
+                                <x-filament::button class="w-full mt-3 inline-flex items-center justify-center h-10 px-4 font-medium tracking-wide text-white transition duration-200 bg-blue-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+                                    Inquire Here
+                                </x-filament::button>
+                            </x-slot>
+                            <livewire:create-response :product_title="$product->id" :date_response="Carbon\Carbon::now()->format('M-d-Y')"/>
+                        </x-filament::modal>
+                      
                        
                 </div>
+                
 
             </div>
-        </div>
-            <div class="flex flex-row items-center gap-2 w-full justify-between mt-4 py-4 px-10 border-y-2 border-blue-200">
+            </div>
+
+          
+   
+       
+        <div class="flex flex-col md:flex-row md:items-center items-start gap-2 w-full justify-between mt-4 py-4 px-5 md:px-10 border-y-2 border-blue-200">
             <div class="flex flex-row items-center gap-2">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
@@ -116,7 +131,7 @@
                 </div>
                 
                   <div class="text-sm">
-                    <span>For Inquiries:</span>
+                    <span>For More Info:</span>
                     <p>Contact Us @ Tel: +632 8723 4461 to 64</p>
                 </div>
             </div>
@@ -163,17 +178,15 @@
                 </div>
                 </div>
             </div>
+            
             </div>
         </div>
                 
-                {{-- <x-filament::modal width="2xl">
-                    <x-slot name="trigger">
-                        <x-filament::button class="mt-3 inline-flex items-center justify-center h-10 px-4 font-medium tracking-wide text-white transition duration-200 bg-blue-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
-                            Apply Now!
-                        </x-filament::button>
-                    </x-slot>
-                    <livewire:create-response :product_title="$product->id" :date_response="Carbon\Carbon::now()->format('M-d-Y')"/>
-                </x-filament::modal> --}}
+               
         </article>
+        
+
+      
+       
 
     </x-app-layout>

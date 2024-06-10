@@ -17,6 +17,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Form;
@@ -71,12 +72,12 @@ class ResponseResource extends Resource
                 ->columnSpan(2)
                 ->hint('  '),
                 // Radio::make('status')->options(ResponseStatus::class),
-                Select::make('post_title')
-                    ->relationship('post', 'title')
+                Select::make('product_title')
+                    ->relationship('product', 'title')
                     ->searchable()
                     ->required()
                     ->preload()
-                    ->label(__('Position')),
+                    ->label(__('Product')),
                 DatePicker::make('date_response')
                     ->required()
                     ->readonly()
@@ -91,34 +92,12 @@ class ResponseResource extends Resource
                     ->email()
                     ->unique()
                     ->label(__('Email Address')),
-                TextInput::make('current_address')
+                Textarea::make('message')
                 ->columnSpan(3)
                     ->required()
-                    ->label(__('Current Address'))
-                    ->hint('#/Street'),
-                    
-                FileUpload::make('attachment')
-                ->uploadingMessage('Uploading attachment...')
-                ->directory('form-attachments')
-                ->visibility('public')
-                ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
-                ->maxSize(5120)
-                ->getUploadedFileNameForStorageUsing(
-                    fn (TemporaryUploadedFile $file): string => (string) str($file->getClientOriginalName())
-                        ->prepend('job_response'),)
-                ->openable()
-                ->downloadable()
-                ->fetchFileInformation(true)
-                ->moveFiles()
-                ->storeFiles(true)
-                ->removeUploadedFileButtonPosition('right')
-                ->uploadButtonPosition('left')
-                ->uploadProgressIndicatorPosition('left')
-                // ->required()
-                ->columnSpan(3)
-                ->id('attachment')
+                    ->label(__('Inquiry Message'))
+                    ->hint('  '),
 
-            ,
             ]) ->columns(3);
     }
 
@@ -137,15 +116,9 @@ class ResponseResource extends Resource
                     ->searchable()
                     ->label(__('Name'))
                     ->alignCenter(),
-                Tables\Columns\TextColumn::make('post.title')
-                 ->label(__('Position'))
+                Tables\Columns\TextColumn::make('product.title')
+                 ->label(__('Product'))
                     ->sortable()
-                    ->alignCenter(),
-                Tables\Columns\IconColumn::make('attachment')
-                    ->grow(false)
-                    ->label(' ')
-                    ->icon('heroicon-o-link')
-                    ->wrap()
                     ->alignCenter(),
                 Tables\Columns\ToggleColumn::make('review')
                     ->label(__('Reviewed'))
@@ -160,7 +133,7 @@ class ResponseResource extends Resource
                     ->alignCenter()
                     
             ])->defaultSort('date_response', 'desc')
-            ->heading('Job Form Responses')
+            ->heading('Product Inquiry Form Responses')
             ->filters([
                 
                 Tables\Filters\TrashedFilter::make(),
@@ -175,14 +148,14 @@ class ResponseResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     ExportBulkAction::make()->exports([
                         ExcelExport::make()
-                        ->withFilename(date(Carbon::now()) . ' - Job Application Responses')
+                        ->withFilename(date(Carbon::now()) . ' - Product Inquiry Responses')
                         ->withColumns([
                             Column::make('date_response')
-                            ->heading('Date of Application'),
+                            ->heading('Date of Inquiry'),
                             Column::make('full_name')
-                            ->heading('Name of Applicant'),
-                            Column::make('post.title')
-                            ->heading('Position Applied'),
+                            ->heading('Name'),
+                            Column::make('product.title')
+                            ->heading('Product Inquired'),
                             Column::make('contact')
                             ->heading('Contact No.'),
                             Column::make('email_address')

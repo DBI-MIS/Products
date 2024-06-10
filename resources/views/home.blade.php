@@ -6,7 +6,7 @@
         <div class="w-full bg-blue-600/50 relative">
             
             <div class="bg-fixed bg-no-repeat bg-cover h-1/2" 
-    style="background-image: url({{ asset('/Background05.png') }})">
+    style="background-image: url({{ asset('/Background06.png') }})">
             
             <div class="mx-[clamp(12px,_-8.8031px_+_6.501vi,_80px)] xl:flex xl:justify-between xl:items-center">
                 

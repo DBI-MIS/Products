@@ -27,7 +27,7 @@ class EPHomeController extends Controller
                 $q->where('name','EP Solutions');
             })
             ->latest('date_posted')
-            ->take(6)->get(),
+            ->take(4)->get(),
 
         ]);
     }

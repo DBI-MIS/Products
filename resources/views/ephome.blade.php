@@ -33,7 +33,7 @@
                 <h2 class="my-2 sm:my-4 md:my-6 text-base md:text-lg xl:text-2xl text-gray-800 font-bold " animate-shake animate-infinite animate-ease-in>
                     Data Center SPD & Waveform Correction Devices</h2>
                 <div class="w-full">
-                    <div class="grid grid-cols-4 gap-2">
+                    <div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-2">
 
                         @foreach($featuredProducts as $product)
                         <div class="md:col-span-1 col-span-3">

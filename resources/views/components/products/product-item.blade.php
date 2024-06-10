@@ -19,7 +19,7 @@
                     </a>
                 </h2>
                 
-                <span>{{ $product->product_brand->name }}</span>
+                <span>{{ $product->product_brand?->name }}</span>
                 <div class="flex flex-row">
                     <div class="topics flex flex-wrap justify-start gap-1 my-auto">
                         @foreach ($product->product_categories as $category)

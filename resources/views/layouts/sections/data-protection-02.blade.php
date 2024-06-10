@@ -1,5 +1,5 @@
-<div class="flex items-center">
-    <div class="flex flex-col">
+<div class="flex flex-col md:flex-row items-center gap-y-5 ">
+    <div class="flex flex-col md:w-2/3">
         <div class="">
             <p class="text-4xl font-bold mt-4">Data Center Protection</p>
         </div>
@@ -11,7 +11,10 @@
      
        
     </div>
-    <a class="text-center my-[clamp(2px,_-1.0593px_+_0.956vi,_12px)] inline-block px-[clamp(12px,_5.8815px_+_1.912vi,_32px)] py-[clamp(2px,_-1.0593px_+_0.956vi,_12px)] text-[clamp(14px,_10.9407px_+_0.956vi,_24px)] text-white bg-blue-600 rounded-lg animate-pulse animate-infinite animate-duration-[3000ms] animate-delay-[2000ms] animate-ease-in shadow-sm shadow-gray-950" 
-            href="https://ep2000.com/data-center-protection/?v=e75edac1b83f">
-            {{ __('COMPLETE DATA CENTER PROTECTION') }}</a>
+    <div class="flex items-center my-5">
+        <a class="text-center py-5 px-3 text-white bg-blue-600 rounded-lg shadow-sm shadow-gray-950" 
+        href="https://ep2000.com/data-center-protection/?v=e75edac1b83f">
+        {{ __('COMPLETE DATA CENTER PROTECTION') }}</a>
+    </div>
+    
 </div>

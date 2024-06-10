@@ -26,13 +26,12 @@ class Response extends Model
     }
 
     protected $fillable = [
-        'post_id',
+        'product_id',
         'full_name',
         'date_response',
         'contact',
         'email_address',
-        'current_address',
-        'attachment',
+        'message',
         'review',
         'status',
     ];
@@ -41,21 +40,20 @@ class Response extends Model
         'date_response' => 'datetime',
         'review' => 'boolean',
         'status' => ResponseStatus::class,
-        // 'attachment' => 'array',
     ];
-    public function job_title()
+    public function equipment_title()
     {
-        return $this->belongsTo(Post::class, 'post_id');
+        return $this->belongsTo(Product::class, 'product_id');
     }
     
-    public function post()
+    public function product()
     {
-        return $this->belongsTo(Post::class, 'post_title');
+        return $this->belongsTo(Product::class, 'product_title');
     }
 
-    public function posts()
+    public function products()
     {
-        return $this->belongsToMany(Post::class);
+        return $this->belongsToMany(Product::class);
     }
 
 }

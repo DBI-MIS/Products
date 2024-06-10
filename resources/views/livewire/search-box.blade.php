@@ -17,7 +17,7 @@
         wire:keydown.enter="update"
         {{-- x-model="search" --}}
             class="w-40 ml-1 bg-transparent focus:outline-none focus:border-none focus:ring-0 outline-none border-none text-xs text-gray-800 placeholder:text-gray-400"
-            type="text" placeholder="Search Job">
+            type="text" placeholder="Search Product">
     </div>
     <x-button wire:click="update" > Search</x-button>
     {{-- <x-button x-on:click="$dispatch('search',{search : query})"> Search </x-button> --}}

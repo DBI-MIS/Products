@@ -15,7 +15,7 @@ class ResponsesOverview extends BaseWidget
     {
         return [
             Stat::make('Total Responses', Response::count())
-            ->description('Number of Job Application Responses')
+            ->description('Number of Product Inquiries')
             ->descriptionIcon('heroicon-o-pencil-square', IconPosition::Before)
             ->chart([1,4,3,4,4,10,20,40])
             ->color('success'),

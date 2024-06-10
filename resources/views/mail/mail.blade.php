@@ -4,11 +4,11 @@
 Name: {{ $response['full_name'] }}<br>
 Contact: {{ $response['contact'] }}<br>
 Email: {{ $response['email_address'] }}<br>
+Inquiry: {{ $response['message'] }}<br>
 @component('mail::subcopy')
-    See attached file for the Resume/CV.
 @endcomponent
 {{ config('app.name') }}    
-@component('mail::button', ['url' => 'https:/careers.dbiphils.com/admin/responses'])
+@component('mail::button', ['url' => 'https:/products.dbiphils.com/admin/responses'])
     View Details
 @endcomponent    
 

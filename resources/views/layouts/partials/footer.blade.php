@@ -9,7 +9,7 @@ py-4 text-sm border-t border-gray-100">
             </a>
         @endforeach
     </div> --}}
-    <div class="flex space-x-4 order-2 sm:oredr-1 my-5">
+    <div class="flex space-x-4 order-2 sm:order-1 my-5">
         <span class="text-sm">&copy;2024, D.B. International Sales & Services, Inc. All Rights Reserved. 
             <br>Built by <a href="https://instragram.com/_exeill" rel="external">XXIV</a></span>
     </div>
