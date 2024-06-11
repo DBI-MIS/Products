@@ -12,7 +12,7 @@
                     <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-full"></td>
                 </tr>
                 @endif
-                <img class="w-full" src="{{ $product->product_img }}" alt="">
+                <img class="w-full" src="/storage/{{ $product->product_img }}" alt="">
                 
             </div>
             <div class="grid grid-cols-3 gap-3 flex-grow">        

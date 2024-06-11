@@ -9,7 +9,7 @@
                     <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-40"></td>
                 </tr>
                 @endif
-                <img class="w-40" src="{{ $product->product_img }}" alt="">
+                <img class="w-40" src="/storage/{{ $product->product_img }}" alt="">
             </div>
             
             <div class="col-span-2">
