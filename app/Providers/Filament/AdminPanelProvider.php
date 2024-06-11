@@ -34,8 +34,6 @@ class AdminPanelProvider extends PanelProvider
             ->darkMode(false)
             ->brandName('DB Products')
             // ->brandLogo('DB Careers')
-            ->databaseNotifications()
-            ->spa()
             ->font('Poppins')
             ->colors([
                 'primary' => Color::hex('#36c'),
