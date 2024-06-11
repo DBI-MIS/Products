@@ -12,7 +12,7 @@ class LatestResponseOverview extends BaseWidget
 {
     protected static ?int $sort = 2;
     protected int | string | array $columnSpan = 'full';
-    protected static ?string $heading = 'Latest Job Applications';
+    protected static ?string $heading = 'Latest Product Inquiry';
     public function table(Table $table): Table
     {
         return $table
@@ -22,7 +22,7 @@ class LatestResponseOverview extends BaseWidget
             ->columns([
                 TextColumn::make('date_response')->since()->label('Date'),
                 TextColumn::make('full_name')->label('Name'),
-                TextColumn::make('post.title')->label('Postition Applied'),
+                TextColumn::make('product.title')->label('Product Inquired'),
                 TextColumn::make('contact')->label('Contact No.'),
                 TextColumn::make('email_address')->label('Email'),
                 
