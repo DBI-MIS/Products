@@ -9,7 +9,7 @@
             >
                 @if ($product->product_img === null)
                 <tr>
-                    <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-full"></td>
+                    <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-full max-h-48"></td>
                 </tr>
                 @endif
                 <img class="w-full" src="/storage/{{ $product->product_img }}" alt="">

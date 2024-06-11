@@ -23,7 +23,7 @@
             
         </div>
     </div>
-    <div class="py-5 grid grid-cols-2">
+    <div class="py-5 flex flex-col md:grid md:grid-cols lg:grid-cols-2">
         @if ($this->products->count() == 0)
         <tr>
             <td colspan="4">No Products to display.</td>
