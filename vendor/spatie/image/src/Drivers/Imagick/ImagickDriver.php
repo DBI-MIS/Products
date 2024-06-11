@@ -22,6 +22,7 @@ use Spatie\Image\Enums\Fit;
 use Spatie\Image\Enums\FlipDirection;
 use Spatie\Image\Enums\Orientation;
 use Spatie\Image\Exceptions\InvalidFont;
+use Spatie\Image\Exceptions\MissingParameter;
 use Spatie\Image\Exceptions\UnsupportedImageFormat;
 use Spatie\Image\Point;
 use Spatie\Image\Size;
@@ -120,10 +121,23 @@ class ImagickDriver implements ImageDriver
         return $this;
     }
 
-    public function fit(Fit $fit, ?int $desiredWidth = null, ?int $desiredHeight = null): static
-    {
+    public function fit(
+        Fit $fit,
+        ?int $desiredWidth = null,
+        ?int $desiredHeight = null,
+        bool $relative = false,
+        ?string $backgroundColor = null,
+    ): static {
         if ($fit === Fit::Crop) {
             return $this->fitCrop($fit, $this->getWidth(), $this->getHeight(), $desiredWidth, $desiredHeight);
+        }
+
+        if ($fit === Fit::FillMax) {
+            if (is_null($desiredWidth) || is_null($desiredHeight)) {
+                throw new MissingParameter('Both desiredWidth and desiredHeight must be set when using Fit::FillMax');
+            }
+
+            return $this->fitFillMax($desiredWidth, $desiredHeight, $backgroundColor);
         }
 
         $calculatedSize = $fit->calculateSize(
@@ -138,8 +152,16 @@ class ImagickDriver implements ImageDriver
         }
 
         if ($fit->shouldResizeCanvas()) {
-            $this->resizeCanvas($desiredWidth, $desiredHeight, AlignPosition::Center, false, null);
+            $this->resizeCanvas($desiredWidth, $desiredHeight, AlignPosition::Center, $relative, $backgroundColor);
         }
+
+        return $this;
+    }
+
+    public function fitFillMax(int $desiredWidth, int $desiredHeight, string $backgroundColor, bool $relative = false): static
+    {
+        $this->resize($desiredWidth, $desiredHeight, [Constraint::PreserveAspectRatio]);
+        $this->resizeCanvas($desiredWidth, $desiredHeight, AlignPosition::Center, $relative, $backgroundColor);
 
         return $this;
     }
