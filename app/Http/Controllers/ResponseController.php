@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Product;
 use App\Models\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,19 +11,14 @@ use Illuminate\Support\Facades\Mail;
 
 class ResponseController extends Controller
 {
-    // public function index() {
-    //     $posts = Post::all('title')->last();
-    //     $post = $posts->last();
-    //     return view('posts.create-response');
-    // }
 
-    public function show(Post $post)
+    public function show(Product $product)
     {
         return view(
-            'posts.create-response',
+            'products.create-response',
             [
-                'post' => $post,
-                'post_title' => $post->title,
+                'product' => $product,
+                'product_title' => $product->title,
                 
             ]
         );
@@ -42,13 +38,13 @@ class ResponseController extends Controller
     //     });
     // }
 
-    public function test_view()
-    {
-            return view('mail.mail');
-    }
+    // public function test_view()
+    // {
+    //         return view('mail.mail');
+    // }
 
-    public function post_job(Request $request)
-    {
-        return $request->all();
-    }
+    // public function post_job(Request $request)
+    // {
+    //     return $request->all();
+    // }
 }

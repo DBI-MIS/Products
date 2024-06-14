@@ -3,13 +3,13 @@
     <div class="article-body grid grid-cols-4 gap-3 mt-5 items-start">
         <div class="col-span-4 flex flex-row gap-2 items-start">
            
-            <div class="col-span-1 flex-shrink-0">
+            <div class="col-span-1 flex-shrink-0 w-[180px]">
                 @if ($product->product_img === null)
                 <tr>
-                    <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-40"></td>
+                    <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-auto h-auto max-w-[160px] max-h-[100px] mx-auto"></td>
                 </tr>
                 @endif
-                <img class="w-40" src="/storage/{{ $product->product_img }}" alt="">
+                <img class="w-auto h-auto max-w-[160px] max-h-[100px] mx-auto" src="/storage/{{ $product->product_img }}" alt="">
             </div>
             
             <div class="col-span-2">
