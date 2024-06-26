@@ -7,41 +7,42 @@
             <div class="w-full md:w-1/3 lg:w-1/2 bg-white">
                 <div class="flex flex-wrap sm:flex-row md:grid md:grid-cols-2 lg:grid-cols-3 justify-around items-center text-center gap-y-2 sm:gap-x-2">
                     
-                        <div class="w-full sm:max-w-48 min-h-[50px] rounded-xl border border-opacity-10 shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 sm:min-h-28 flex sm:block items-center mx-auto">
-                            <a href="/product?category=Airconditioning"><img class="w-40 mx-auto hidden sm:block" src="{{asset('/Product Image - AIRCONDITIONING.png')}}" alt=""></a>
-                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap">Airconditioning</p>
+                        <div class="w-full sm:max-w-48 min-h-[50px] max-h-fit rounded-none md:rounded-xl md:border border-none md:border-opacity-10 sm:shadow-none shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
+                            <a href="/product?category=Airconditioning"><img class="w-full mx-auto hidden sm:block p-2" src="{{asset('/Product Image - AIRCONDITIONING.png')}}" alt=""></a>
+                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap px-4">Airconditioning</p>
                             
                         </div>
                         
 
-                      <div class="w-full sm:max-w-48 min-h-[50px] rounded-xl border border-opacity-10 shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
-                            <a href="/product?category=Refrigeration"><img class="w-40 mx-auto hidden sm:block" src="{{asset('/Product Image - REFRIGERATION.png')}}" alt=""></a>
-                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap">Refrigeration</p>
+                      <div class="w-full sm:max-w-48 min-h-[50px] max-h-fit rounded-none md:rounded-xl md:border border-none md:border-opacity-10 sm:shadow-none shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
+                            <a href="/product?category=Refrigeration"><img class="w-full mx-auto hidden sm:block p-2" src="{{asset('/Product Image - REFRIGERATION.png')}}" alt=""></a>
+                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap px-4">Refrigeration</p>
                         </div>
                        
                     
                     
-                      <div class="w-full sm:max-w-48 min-h-[50px] rounded-xl border border-opacity-10 shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
-                            <a href="/product?category=Ventilation"><img class="w-40 mx-auto hidden sm:block" src="{{asset('/Product Image - VENTILATION.png')}}" alt=""></a>
-                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap">Ventilation</p>
+                      <div class="w-full sm:max-w-48 min-h-[50px] max-h-fit rounded-none md:rounded-xl md:border border-none md:border-opacity-10 sm:shadow-none shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
+                            <a href="/product?category=Ventilation"><img class="w-full mx-auto hidden sm:block p-2" src="{{asset('/Product Image - VENTILATION.png')}}" alt=""></a>
+                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap px-4">Ventilation</p>
                         </div>
                         
 
-                      <div class="w-full sm:max-w-48 min-h-[50px] rounded-xl border border-opacity-10 shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
-                            <a href="/product?category=CoolingTower"><img class="w-40 mx-auto hidden sm:block" src="{{asset('/Product Image - COOLING TOWER TRUE.png')}}" alt=""></a>
-                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap">Cooling Towers</p>
+                      <div class="w-full sm:max-w-48 min-h-[50px] max-h-fit rounded-none md:rounded-xl md:border border-none md:border-opacity-10 sm:shadow-none shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
+                            <a href="/product?category=CoolingTower"><img class="w-full mx-auto hidden sm:block p-2" src="{{asset('/Product Image - COOLING TOWER TRUE.png')}}" alt=""></a>
+                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap px-4">Cooling Towers</p>
                         </div>
                         
 
-                        <div class="w-full sm:max-w-48 min-h-[50px] rounded-xl border border-opacity-10 shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
-                            <a href="/epsolutions"><img class="w-40 mx-auto hidden sm:block" src="{{asset('/Product Image - EPSOLUTIONS.png')}}" alt=""></a>
-                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap">EP Solutions</p>
+                        <div class="w-full sm:max-w-48 min-h-[50px] max-h-fit rounded-none md:rounded-xl md:border border-none md:border-opacity-10 sm:shadow-none shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
+                            <a href="/epsolutions"><img class="w-full mx-auto hidden sm:block p-2" src="{{asset('/Product Image - EPSOLUTIONS.png')}}" alt=""></a>
+                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap px-4">Data Center Solutions</p>
                         </div>
                         
 
-                      <div class="w-full sm:max-w-48 min-h-[50px] rounded-xl border border-opacity-10 shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
-                            <a href="https://www.tacphils.com/" target="_blank"><img class="w-40 mx-auto hidden sm:block" src="{{asset('/VCOLogo.png')}}" alt=""></a>
-                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap">Coconut Oil Products</p>
+                      <div class="w-full sm:max-w-48 min-h-[50px] max-h-fit rounded-none md:rounded-xl md:border border-none md:border-opacity-10 sm:shadow-none shadow-lg bg-white hover:bg-gray-100 border-blue-800 min-w-28 md:min-h-28 flex sm:block items-center mx-auto">
+                            <a href="https://www.tacphils.com/" target="_blank"><img class="w-full mx-auto hidden sm:block p-2" src="{{asset('/VCOLogo.png')}}" alt=""></a>
+                            <p class="text-lg sm:text-base md:text-xs lg:text-lg mx-auto py-2 text-wrap px-4">Coconut Oil Products</p>
+                            
                         </div>
                         
                        

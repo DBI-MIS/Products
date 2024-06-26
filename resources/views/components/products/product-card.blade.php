@@ -1,14 +1,14 @@
 @props(['product'])
 <div class="w-full  py-2 px-2 mb-5 rounded-xl border border-opacity-10 p-2 shadow-lg bg-white hover:bg-gray-100 border-blue-800">
-    <div class="grid grid-cols-2 md:flex md:flex-col gap-x-5 text-balance">
+    <div class="grid grid-cols-2 md:flex md:flex-col gap-x-5 text-balance" wire:navigate href="{{ route('products.show', $product->slug) }}">
         
         <div class="col-span-1 mx-auto">
             @if ($product->product_img === null)
             <tr>
-                <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-auto h-auto max-h-[200px]"></td>
+                <td><img src="{{asset('/Product_Default.png')}}" alt="Product Image" class="w-auto h-auto max-h-[120px] max-w-[180px]"></td>
             </tr>
             @endif
-            <img class="w-auto h-auto max-h-[200px]" src="/storage/{{ $product->product_img }}" alt="">
+            <img class="w-auto h-auto max-h-[120px] max-w-[180px]" src="/storage/{{ $product->product_img }}" alt="">
         </div>
         <div class="col-span-1 w-full flex flex-col p-2">
             
